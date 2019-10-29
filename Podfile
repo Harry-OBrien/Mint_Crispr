@@ -11,4 +11,12 @@ target 'MintCrispr' do
 
   pod 'Fabric', '~> 1.10.2'
   pod 'Crashlytics', '~> 3.14.0'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  
+  # Pod for charts and graphs librarycd 
+  pod 'Charts'
+  
 end

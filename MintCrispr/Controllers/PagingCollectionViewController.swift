@@ -42,35 +42,6 @@ class PagingCollectionViewController: UICollectionViewController {
 		}
 	}
 	
-	//TODO: Do this properly lol (handle cell expanding)
-	private lazy var midPointOfBottomBarAndCell: CGPoint = {
-		
-		let bottomOfCell = collectionView.frame.maxY //+ (itemSize.height / 2)
-		
-		var bottomOfUsableView: CGFloat = view.frame.height
-		if let tabBarFrame = tabBarController?.tabBar.frame {
-			bottomOfUsableView = tabBarFrame.minY
-		}
-		
-		let midY = (bottomOfCell + bottomOfUsableView) / 2
-		
-		return CGPoint(x: view.bounds.midX, y: midY)
-	}()
-	
-	lazy var plusButton: UIButton = {
-		let button = UIButton(frame:
-			CGRect(origin: midPointOfBottomBarAndCell,
-				   size: CGSize(width: 56, height: 56))
-		)
-		button.setImage(UIImage(named: "plus_icon")?.tinted(color: .white), for: .normal)
-		button.backgroundColor = UIColor.rgb(red: 36, green: 150, blue: 97)
-		
-		button.layer.cornerRadius = button.frame.width / 2
-		button.layer.masksToBounds = true
-		
-		return button
-	}()
-	
 	// MARK: Lifecycle
 	
 	override func viewDidLoad() {
@@ -80,9 +51,6 @@ class PagingCollectionViewController: UICollectionViewController {
 		
 		// Register cell classes
 		self.collectionView!.register(PagingCollectionViewCell.self, forCellWithReuseIdentifier: PagingCollectionViewCell.reuseIdentifier)
-		
-		//TODO: remove mock data
-		devices = ScannerDevice.getMockScanners()
 		
 		collectionView!.decelerationRate = .fast
 		collectionView!.showsHorizontalScrollIndicator = false

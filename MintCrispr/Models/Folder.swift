@@ -8,10 +8,8 @@
 
 import Foundation
 
-class Folder {
-	let name: String
-	
-	init(name: String) {
-		self.name = name
-	}
+struct Folder {
+	let title: String
+    let lastAccessDateTime: Date
+    let accessId: String
 }
