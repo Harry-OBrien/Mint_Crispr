@@ -15,6 +15,7 @@ target 'MintCrispr' do
   pod 'Firebase/Storage'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+	pod 'Firebase/Firestore'
   
   # Pod for charts and graphs librarycd 
   pod 'Charts'

@@ -10,9 +10,12 @@ import Foundation
 
 struct ScannerDevice {
     let id: String
+	let hospitalDepartmentReference: String
+	
 	let deviceName: String
 	let lastSeenDateTime: Date
 	let online: Bool
+	
 	var readableLastSeenDate: String {
 		let df = DateFormatter()
 		df.dateStyle = .medium

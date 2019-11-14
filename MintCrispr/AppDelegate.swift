@@ -8,9 +8,9 @@
 
 import UIKit
 import CoreData
-import Firebase
-import Fabric
-import Crashlytics
+//import Firebase
+//import Fabric
+//import Crashlytics
 
 
 //TODO: Complete https://www.raywenderlich.com/7569-getting-started-with-core-data-tutorial
@@ -27,9 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		
 		//Configure firebase
-		FirebaseApp.configure()
-		
-		Fabric.sharedSDK().debug = true
+//		FirebaseApp.configure()
+//		Fabric.sharedSDK().debug = true
 		
 		//setup window
 		window = UIWindow(frame: UIScreen.main.bounds)
@@ -37,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		//view controllers for the tab bar
 		let scannersVC = PagingCollectionViewController(
-			collectionViewLayout: PageCollectionLayout(itemSize: CGSize(width: 256, height: 415))
+			collectionViewLayout: PageCollectionLayout()
 		)
 		scannersVC.tabBarItem = UITabBarItem(title: "Scanners", image: #imageLiteral(resourceName: "target_icon"), tag: 0)
 		let scannerNavVC = UINavigationController(rootViewController: scannersVC)
@@ -48,10 +47,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let filesNavVC = UINavigationController(rootViewController: filesVC)
 		setNavTitleLabelFor(filesNavVC)
 		
-		let analyticsVC = CBSampleViewController()
-		analyticsVC.tabBarItem = UITabBarItem(title: "Analytics", image: #imageLiteral(resourceName: "analysis_icon"), tag: 0)
-		let analyticsNavVC = UINavigationController(rootViewController: analyticsVC)
-		setNavTitleLabelFor(analyticsNavVC)
+		// NOTE:
+		
+//		let analyticsVC = CBSampleViewController()
+//		analyticsVC.tabBarItem = UITabBarItem(title: "Analytics", image: #imageLiteral(resourceName: "analysis_icon"), tag: 0)
+//		let analyticsNavVC = UINavigationController(rootViewController: analyticsVC)
+//		setNavTitleLabelFor(analyticsNavVC)
 		
 		let settingsVC = TableViewController(style: UITableView.Style.grouped)
 		settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: #imageLiteral(resourceName: "more_icon"), tag: 0)
@@ -60,10 +61,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		// Initialise the tab bar and set view controllers
 		let tabBarCtrl = BubbleTabBarController()
-		tabBarCtrl.viewControllers = [scannerNavVC, filesNavVC, analyticsNavVC, settingsNavVC]
+		tabBarCtrl.viewControllers = [scannerNavVC, filesNavVC, settingsNavVC]
 		tabBarCtrl.tabBar.tintColor = UIColor.rgb(red: 241, green: 181, blue: 24)
 		
 		window?.rootViewController = tabBarCtrl
+		
+//		window?.rootViewController = TestVC()
 		
 		return true
 	}
@@ -151,6 +154,7 @@ extension AppDelegate {
 													attributes: [NSAttributedString.Key.font:UIFont(name: "HelveticaNeue-CondensedBold", size: 36)!]
 		)
 		
+		// Set 'Mint' to a minty colour
 		titleString.addAttribute(NSAttributedString.Key.foregroundColor,
 								 value: UIColor.rgb(red: 83, green: 182, blue: 138),
 								 range: NSRange(location:0,length:4)

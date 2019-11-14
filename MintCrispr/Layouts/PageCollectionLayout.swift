@@ -10,31 +10,21 @@ import UIKit
 
 class PageCollectionLayout: UICollectionViewFlowLayout {
 	
-	fileprivate var lastCollectionViewSize: CGSize = CGSize.zero
+	fileprivate var lastCollectionViewSize: CGSize = .zero
 	
 	var scalingOffset: CGFloat = 200
 	var minimumScaleFactor: CGFloat = 0.9
-	var minimumAlphaFactor: CGFloat = 0.3
+	var minimumAlphaFactor: CGFloat = 0.4
 	var scaleItems: Bool = true
 	
-	required init?(coder _: NSCoder) {
-		fatalError()
-	}
-	
-	init(itemSize: CGSize) {
+	override init() {
 		super.init()
-		commonInit(itemSize)
-	}
-}
-
-// MARK: life cicle
-
-extension PageCollectionLayout {
-	
-	fileprivate func commonInit(_ itemSize: CGSize) {
 		scrollDirection = .horizontal
-		minimumLineSpacing = 25
-		self.itemSize = itemSize
+		minimumLineSpacing = 24
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
 	}
 }
 
