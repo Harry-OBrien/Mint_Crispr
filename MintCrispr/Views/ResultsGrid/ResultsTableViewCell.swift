@@ -22,7 +22,7 @@ class ResultsTableViewCell: UITableViewCell {
 	}
 	var testIndex: Int! {
 		didSet {
-			indexLabel.text = String(testIndex) + ")"
+			indexLabel.text = String(testIndex) + " )"
 		}
 	}
 	
@@ -31,7 +31,7 @@ class ResultsTableViewCell: UITableViewCell {
 	let indexLabel: UILabel = {
 		let label = UILabel()
 		label.font = UIFont.systemFont(ofSize: 16)
-		label.text = "1)"
+		label.text = "1 )"
 		
 		return label
 	}()
@@ -39,7 +39,7 @@ class ResultsTableViewCell: UITableViewCell {
 	let diseaseUnderTestLabel: UILabel = {
 		let label = UILabel()
 		label.font = UIFont.systemFont(ofSize: 16)
-		label.textColor = UIColor(white: 0.6, alpha: 1)
+		label.textColor = UIColor(white: 0.4, alpha: 1)
 		label.text = "Malaria"
 		
 		return label
@@ -70,6 +70,8 @@ class ResultsTableViewCell: UITableViewCell {
 
 extension ResultsTableViewCell {
 	private func setupViews() {
+        backgroundColor = UIColor(white: 0.99, alpha: 1)
+        
 		addSubview(indexLabel)
 		addSubview(diseaseUnderTestLabel)
 		addSubview(resultLabel)
@@ -78,7 +80,7 @@ extension ResultsTableViewCell {
 		diseaseUnderTestLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
 		resultLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
 		
-		addConstraintsWith(format: "H:|-[v0(20)]-[v1]-[v2]|", views: indexLabel, diseaseUnderTestLabel, resultLabel)
+		addConstraintsWith(format: "H:|-[v0(30)]-[v1]-[v2]|", views: indexLabel, diseaseUnderTestLabel, resultLabel)
 		diseaseUnderTestLabel.widthAnchor.constraint(equalTo: resultLabel.widthAnchor, multiplier: 1.5).isActive = true
 	}
 }

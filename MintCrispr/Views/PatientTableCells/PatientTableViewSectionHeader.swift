@@ -11,11 +11,18 @@ import UIKit
 class PatientTableViewSectionHeader: UIView {
 	
 	// MARK: View Components
+    
+    public var fontSize: CGFloat = 30 {
+        didSet {
+            let oldTextString = titleLabel.attributedText!.string
+            titleLabel.attributedText = NSAttributedString(string: oldTextString, attributes: [.kern : 1.3, .underlineStyle: NSUnderlineStyle.single.rawValue, .font : UIFont(name: "HelveticaNeue-CondensedBold", size: fontSize)!])
+        }
+    }
 	
-	let titleLabel: UILabel = {
+	private let titleLabel: UILabel = {
 		let label = UILabel()
 		label.attributedText = NSAttributedString(string: "Harry O'Brien", attributes: [.kern : 1.3, .underlineStyle: NSUnderlineStyle.single.rawValue, .font : UIFont(name: "HelveticaNeue-CondensedBold", size: 30)!])
-		
+        label.lineBreakMode = .byClipping
 		return label
 	}()
 	
@@ -38,6 +45,6 @@ extension PatientTableViewSectionHeader {
 		backgroundColor = .white
 		addSubview(titleLabel)
 		addConstraintsWith(format: "H:|-[v0]-|", views: titleLabel)
-		addConstraintsWith(format: "V:|[v0]|", views: titleLabel)
+		addConstraintsWith(format: "V:[v0]-|", views: titleLabel)
 	}
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ab-xN-f6i">
                                 <rect key="frame" x="98" y="568" width="218" height="186"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="186" id="Flr-Z9-cpI"/>
+                                    <constraint firstAttribute="height" constant="186" id="6ak-Ne-3DS"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Mint">
@@ -51,15 +51,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EhC-cF-EGG" firstAttribute="centerX" secondItem="vux-Gv-02v" secondAttribute="centerX" id="01N-a0-pPa"/>
-                            <constraint firstItem="vux-Gv-02v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="HcE-tI-xUn"/>
-                            <constraint firstItem="7ab-xN-f6i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="NX4-Os-K16"/>
-                            <constraint firstItem="vux-Gv-02v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P7T-4O-CId"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ab-xN-f6i" secondAttribute="trailing" constant="98" id="Vd1-6x-4PU"/>
-                            <constraint firstItem="EhC-cF-EGG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="151" id="cZg-e6-6P8"/>
-                            <constraint firstItem="vux-Gv-02v" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cvE-Hp-Qey"/>
-                            <constraint firstItem="7ab-xN-f6i" firstAttribute="top" secondItem="vux-Gv-02v" secondAttribute="bottom" constant="8" id="ljI-Ek-NsB"/>
-                            <constraint firstItem="EhC-cF-EGG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mWr-PH-QIz"/>
+                            <constraint firstItem="7ab-xN-f6i" firstAttribute="top" secondItem="vux-Gv-02v" secondAttribute="bottom" constant="8" id="1wK-RF-nY9"/>
+                            <constraint firstItem="7ab-xN-f6i" firstAttribute="centerX" secondItem="EhC-cF-EGG" secondAttribute="centerX" id="Cwh-D0-KK8"/>
+                            <constraint firstItem="vux-Gv-02v" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="F7h-oi-z8a"/>
+                            <constraint firstItem="vux-Gv-02v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JnP-er-fcD"/>
+                            <constraint firstItem="EhC-cF-EGG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="151" id="MSW-bv-OOr"/>
+                            <constraint firstItem="7ab-xN-f6i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="Vj1-IY-1Ro"/>
+                            <constraint firstItem="vux-Gv-02v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="XJc-Pp-ruM"/>
+                            <constraint firstItem="EhC-cF-EGG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ylu-Ey-wg2"/>
+                            <constraint firstItem="vux-Gv-02v" firstAttribute="centerX" secondItem="7ab-xN-f6i" secondAttribute="centerX" id="wMI-Uy-Wf3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

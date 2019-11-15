@@ -23,10 +23,6 @@ class FrontContainerView: PagingCellContainerView {
 		return label
 	}()
 	
-
-//	frontContainerView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -openCellOffset).isActive = true
-//	rearContainerView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: +openCellOffset).isActive = true
-	
 	// MARK: View Setup
 
 	override func setupViews() {
