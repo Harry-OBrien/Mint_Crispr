@@ -33,6 +33,7 @@
 		3E7DC869497F20809EE1CEA2 /* Pods_MintCrispr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9FCF31C719D3D1BE0BC0E7 /* Pods_MintCrispr.framework */; };
 		4A28F935237DF49C006BA7D5 /* PatientTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28F934237DF49C006BA7D5 /* PatientTestTableViewCell.swift */; };
 		4A28F937237DFC52006BA7D5 /* ResultsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28F936237DFC52006BA7D5 /* ResultsTableView.swift */; };
+		4A39F6BE237E2B060091B2E5 /* ToDo.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A39F6BD237E2B060091B2E5 /* ToDo.md */; };
 		4AA6A78123671466000C1E32 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6A77723671466000C1E32 /* UIImageViewExtension.swift */; };
 		4AA6A78223671466000C1E32 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6A77823671466000C1E32 /* UIColorExtension.swift */; };
 		4AA6A78323671466000C1E32 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6A77923671466000C1E32 /* UICollectionViewCellExtension.swift */; };
@@ -78,6 +79,7 @@
 		16E62A16230F7455006F20AF /* PagingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewController.swift; sourceTree = "<group>"; };
 		4A28F934237DF49C006BA7D5 /* PatientTestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PatientTestTableViewCell.swift; path = ../../../../../.Trash/PatientTestTableViewCell.swift; sourceTree = "<group>"; };
 		4A28F936237DFC52006BA7D5 /* ResultsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableView.swift; sourceTree = "<group>"; };
+		4A39F6BD237E2B060091B2E5 /* ToDo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ToDo.md; sourceTree = "<group>"; };
 		4AA6A77723671466000C1E32 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		4AA6A77823671466000C1E32 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		4AA6A77923671466000C1E32 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				1662E55B2302FB32001196E6 /* LaunchScreen.storyboard */,
 				1662E55E2302FB32001196E6 /* Info.plist */,
 				1662E5562302FB32001196E6 /* MintCrispr.xcdatamodeld */,
+				4A39F6BD237E2B060091B2E5 /* ToDo.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			files = (
 				1662E55D2302FB32001196E6 /* LaunchScreen.storyboard in Resources */,
 				1662E55A2302FB32001196E6 /* Assets.xcassets in Resources */,
+				4A39F6BE237E2B060091B2E5 /* ToDo.md in Resources */,
 				16E45C31233E9AE30030AB58 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
