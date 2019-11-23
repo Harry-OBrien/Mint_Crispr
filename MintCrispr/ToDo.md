@@ -2,11 +2,15 @@
 
 ## Scanners section
 Fill in content for the scanners paging view
+create color palet that the gradient layers can take
 develop scanner detail view
 develop 'add new scanner' view
 Fix when the paging cell closes
 Implement core data for remembering connected devices
 implement bluetooth connectivity
+store scanner colors as variable in model for repeatability
+create 'regenerate scanner color' btn in device settings
+set offset to the top of the most recently selected cell
 
 ## Folder section
 Implement model

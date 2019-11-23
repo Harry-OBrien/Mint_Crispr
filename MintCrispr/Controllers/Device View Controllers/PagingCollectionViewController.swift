@@ -111,7 +111,7 @@ extension PagingCollectionViewController {
 		cell.willAnimateCell = false
 		cell.isOpen = false
 		cell.willAnimateCell = true
-
+		
 		return cell
 	}
 }
@@ -125,9 +125,11 @@ extension PagingCollectionViewController {
 			else {
 				return
 		}
-
+		
 		if cell.isOpen {
 			let deviceDetail = DeviceDetailTableViewController()
+			deviceDetail.backgroundGradientImage = UIImage(named: "low_poly_6")//cell.gradientImage
+			
 			navigationItem.backBarButtonItem = UIBarButtonItem()
 			navigationController?.pushViewController(deviceDetail, animated: true)
 		}
@@ -177,6 +179,8 @@ extension PagingCollectionViewController {
 		// double swipe up for transition
 		if cell.isOpen && sender.direction == .up {
 			let deviceDetail = DeviceDetailTableViewController()
+			deviceDetail.backgroundGradientImage = UIImage(named: "low_poly_6")//cell.gradientImage
+			
 			navigationItem.backBarButtonItem = UIBarButtonItem()
 			navigationController?.pushViewController(deviceDetail, animated: true)
 		}
@@ -198,7 +202,6 @@ extension PagingCollectionViewController {
 
 extension PagingCollectionViewController {
 	@objc private func addNewDevice() {
-		print("yello?")
 		let vc = AddNewDeviceTableViewController()
 		navigationItem.backBarButtonItem = UIBarButtonItem()
 		navigationController?.pushViewController(vc, animated: true)

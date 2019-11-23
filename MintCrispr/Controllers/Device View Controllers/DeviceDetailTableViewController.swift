@@ -9,79 +9,99 @@
 import UIKit
 
 class DeviceDetailTableViewController: UITableViewController {
+	
+	public var backgroundGradientImage: UIImage! {
+		didSet {
+			print(1)
+			headerView.backgroundGradientImageView.image = backgroundGradientImage
+			headerView.layoutSubviews()
+		}
+	}
+	
+	private lazy var headerHeight: CGFloat = view.frame.height / 4.5
+	private lazy var headerView = DeviceDetailHeaderView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: headerHeight))
+	private var selectedCell: Int? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         navigationItem.rightBarButtonItem = editButtonItem
 		
-		tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
+		tableView.register(DetailExpandingTableViewCell.self, forCellReuseIdentifier: DetailExpandingTableViewCell.reuseIdentifier)
+		tableView.register(DetailInterfaceCell.self, forCellReuseIdentifier: DetailInterfaceCell.reuseIdentifier)
+		
+		 tableView.backgroundColor = UIColor.rgb(red: 235, green: 235, blue: 242)
+		
+		tableView.tableHeaderView = nil
+        tableView.addSubview(headerView)
+        tableView.contentInset = UIEdgeInsets(top: headerHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset = CGPoint(x: 0, y: -headerHeight)
+        
+        updateHeaderView()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 1
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.reuseIdentifier, for: indexPath)
+		switch indexPath.item {
+		case 0:
+			return tableView.dequeueReusableCell(withIdentifier: DetailInterfaceCell.reuseIdentifier, for: indexPath)
+			
+		default:
+			let cell = tableView.dequeueReusableCell(withIdentifier: DetailExpandingTableViewCell.reuseIdentifier, for: indexPath) as! DetailExpandingTableViewCell
+			
+			cell.isOpen = (selectedCell == indexPath.item)
+			return cell
+		}
+	}
+	
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		
+		switch indexPath.item {
+		case 0:
+			return view.frame.height - headerHeight
+			
+		case selectedCell:
+			return ResultsTableView().rowHeight * 6 + 80
+			
+		default:
+			return 60
+		}
+	}
+	
+	override func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
+		if indexPath.item == 0 {return false}
+		return true
+	}
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if indexPath.item == 0 {
+			tableView.deselectRow(at: indexPath, animated: false)
+			return
+		}
+	
+		selectedCell = (selectedCell == indexPath.item) ? nil : indexPath.item
+		tableView.reloadData()
+	}
+}
 
-        return cell
-    }
-    
+// MARK: Scroll Handling
 
-    
-    // Override to support conditional editing of the table view.
-//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//
-//		switch indexPath.item {
-//		case 0, 1:
-//			return false
-//
-//		default:
-//			return true
-//		}
-//	}
-    
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension DeviceDetailTableViewController {
+	override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		   updateHeaderView()
+	   }
+	   
+	   private func updateHeaderView() {
+		   var headerRect = CGRect(x: 0, y: -headerHeight, width: tableView.bounds.width, height: headerHeight)
+		   
+		   if tableView.contentOffset.y < -headerHeight {
+			   headerRect.origin.y = tableView.contentOffset.y
+			   headerRect.size.height = -tableView.contentOffset.y
+		   }
+		   
+		   headerView.frame = headerRect
+	   }
 }

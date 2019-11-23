@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,19 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mint_crispr_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vux-Gv-02v">
-                                <rect key="frame" x="0.0" y="48" width="414" height="512"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V 0.0.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhC-cF-EGG">
-                                <rect key="frame" x="151" y="841" width="112" height="21"/>
+                                <rect key="frame" x="182" y="841" width="50.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Wun-TX-FmE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ab-xN-f6i">
-                                <rect key="frame" x="98" y="568" width="218" height="186"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mint_crispr_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vux-Gv-02v">
+                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="186" id="6ak-Ne-3DS"/>
+                                    <constraint firstAttribute="width" secondItem="vux-Gv-02v" secondAttribute="height" multiplier="1:1" id="0hH-5y-AM5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="172" translatesAutoresizingMaskIntoConstraints="NO" id="7ab-xN-f6i">
+                                <rect key="frame" x="103.5" y="489" width="207" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="QxX-aB-d3Z"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Mint">
@@ -51,22 +57,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7ab-xN-f6i" firstAttribute="top" secondItem="vux-Gv-02v" secondAttribute="bottom" constant="8" id="1wK-RF-nY9"/>
-                            <constraint firstItem="7ab-xN-f6i" firstAttribute="centerX" secondItem="EhC-cF-EGG" secondAttribute="centerX" id="Cwh-D0-KK8"/>
-                            <constraint firstItem="vux-Gv-02v" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="F7h-oi-z8a"/>
-                            <constraint firstItem="vux-Gv-02v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JnP-er-fcD"/>
-                            <constraint firstItem="EhC-cF-EGG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="151" id="MSW-bv-OOr"/>
-                            <constraint firstItem="7ab-xN-f6i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="Vj1-IY-1Ro"/>
-                            <constraint firstItem="vux-Gv-02v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="XJc-Pp-ruM"/>
-                            <constraint firstItem="EhC-cF-EGG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ylu-Ey-wg2"/>
-                            <constraint firstItem="vux-Gv-02v" firstAttribute="centerX" secondItem="7ab-xN-f6i" secondAttribute="centerX" id="wMI-Uy-Wf3"/>
+                            <constraint firstItem="EhC-cF-EGG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3Dg-d0-h8H"/>
+                            <constraint firstItem="7ab-xN-f6i" firstAttribute="top" secondItem="vux-Gv-02v" secondAttribute="bottom" constant="31" id="4Yc-z9-43y"/>
+                            <constraint firstItem="7ab-xN-f6i" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vqd-3H-7tJ"/>
+                            <constraint firstItem="EhC-cF-EGG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="aAJ-jy-ilI"/>
+                            <constraint firstItem="7ab-xN-f6i" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="gib-wF-9R6"/>
+                            <constraint firstItem="vux-Gv-02v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hUq-P5-Frv"/>
+                            <constraint firstItem="vux-Gv-02v" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jiT-tC-Sr9"/>
+                            <constraint firstItem="vux-Gv-02v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m9p-3T-Lhl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="49.275362318840585" y="375"/>
         </scene>
     </scenes>
     <resources>

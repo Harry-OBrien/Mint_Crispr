@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PagingCellContainerView: UIView {
+class PagingCellSectionView: UIView {
 	
 	public var widthConstraint: NSLayoutConstraint!
 	public var closedCenterYConstraint: NSLayoutConstraint!
@@ -28,7 +28,7 @@ class PagingCellContainerView: UIView {
 	// MARK: View Setup
 	
 	internal func setupViews() {
-		backgroundColor = .white
+//		backgroundColor = .white
 		layer.masksToBounds = true
 		layer.cornerRadius = 5
 		translatesAutoresizingMaskIntoConstraints = false

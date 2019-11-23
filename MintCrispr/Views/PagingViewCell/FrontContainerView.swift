@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FrontContainerView: PagingCellContainerView {
+class FrontContainerView: PagingCellSectionView {
 	
 	// MARK: View Components
 	
@@ -19,21 +19,22 @@ class FrontContainerView: PagingCellContainerView {
 		label.lineBreakMode = .byWordWrapping
 		label.textColor = .black
 		label.textAlignment = .center
+		label.text = "Blood Scanner 1"
 		
 		return label
 	}()
+	
+	let backgroundGradientView = PagingCellSectionView()
 	
 	// MARK: View Setup
 
 	override func setupViews() {
 		super.setupViews()
-		
 		addShadow(opacity: 0.5, offset: CGSize(width: 0, height: 4))
+		embedInsideSafeArea(backgroundGradientView)
 		
 		addSubview(DeviceNameTitleLable)
 		addConstraintsWith(format: "H:|-[v0]-|", views: DeviceNameTitleLable)
 		addConstraintsWith(format: "V:|-[v0]", views: DeviceNameTitleLable)
-		
 	}
-
 }

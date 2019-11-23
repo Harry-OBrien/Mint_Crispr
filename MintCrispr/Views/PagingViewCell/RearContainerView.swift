@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RearContainerView: PagingCellContainerView {
+class RearContainerView: PagingCellSectionView {
 	
 	// MARK: View Components
 	
@@ -26,7 +26,7 @@ class RearContainerView: PagingCellContainerView {
 	
 	override func setupViews() {
 		super.setupViews()
-		
+		backgroundColor = .white
 		addShadow(opacity: 0.2, offset: CGSize(width: 0, height: 2))
 	}
 	

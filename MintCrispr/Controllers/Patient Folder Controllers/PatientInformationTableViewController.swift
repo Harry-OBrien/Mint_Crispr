@@ -16,7 +16,7 @@ class PatientInformationTableViewController: UITableViewController {
     let headerHeight: CGFloat = 64
     lazy var rowHeights = [CGFloat].init(repeating: 0, count: self.rowCount)
     
-    var headerView = PatientTableViewSectionHeader()
+    let headerView = PatientTableViewSectionHeader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,8 +62,11 @@ class PatientInformationTableViewController: UITableViewController {
         }
     }
     
-    // MARK: Scroll handling
-    
+}
+
+// MARK: Scroll handling
+
+extension PatientInformationTableViewController {
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateHeaderView()
     }

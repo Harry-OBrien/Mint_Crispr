@@ -14,7 +14,7 @@ class PageCollectionLayout: UICollectionViewFlowLayout {
 	
 	var scalingOffset: CGFloat = 200
 	var minimumScaleFactor: CGFloat = 0.9
-	var minimumAlphaFactor: CGFloat = 0.4
+	var minimumAlphaFactor: CGFloat = 0.4	
 	var scaleItems: Bool = true
 	
 	override init() {

@@ -27,6 +27,13 @@ class PagingCollectionViewCell: UICollectionViewCell {
 		}
 	}
 	
+	public var gradientImage: UIImage {
+		get {
+			return frontContainerView.takeSnapshot(frontContainerView.bounds)!
+//			return frontContainerView.asImage()
+		}
+	}
+	
 	//MARK: View components
 	
 	private let frontContainerView = FrontContainerView()
@@ -53,6 +60,7 @@ extension PagingCollectionViewCell {
 		
 		setupRearContainerView()
 		setupFrontContainerView()
+		
 	}
 	
 	private func setupRearContainerView() {
@@ -86,6 +94,16 @@ extension PagingCollectionViewCell {
 		// now activate the constraints
 		frontContainerView.widthConstraint.isActive = true
 		frontContainerView.closedCenterYConstraint.isActive = true
+		
+		// Background gradient
+		let gradientLayer = CAGradientLayer()
+		
+		gradientLayer.colors = [UIColor.random().cgColor, UIColor.random().cgColor]
+		
+		gradientLayer.frame = self.bounds
+		gradientLayer.startPoint = CGPoint(x: 0, y: 0.1)
+		gradientLayer.endPoint = CGPoint(x: 1, y: 0.9)
+		frontContainerView.backgroundGradientView.layer.insertSublayer(gradientLayer, at: 0)
 	}
 }
 
