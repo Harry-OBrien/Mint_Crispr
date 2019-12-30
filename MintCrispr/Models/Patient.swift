@@ -7,12 +7,12 @@
 //
 
 import Foundation
-import FirebaseCore
-import FirebaseFirestore
+//import FirebaseCore
+//import FirebaseFirestore
 
 struct Patient {
 	let id: String
-	let hospitalDepartmentReference: DocumentReference
+//	let hospitalDepartmentReference: DocumentReference
 	
 	let firstName: String
 	let lastName: String
