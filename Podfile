@@ -7,14 +7,14 @@ target 'MintCrispr' do
 
   # Pods for MintCrispr
   # add the Firebase pod for Google Analytics
-  pod 'Firebase/Analytics'
+  #pod 'Firebase/Analytics'
 
-  pod 'Fabric', '~> 1.10.2'
-  pod 'Crashlytics', '~> 3.14.0'
-  pod 'Firebase/Core'
-	pod 'Firebase/Firestore'
+  #pod 'Fabric', '~> 1.10.2'
+  #pod 'Crashlytics', '~> 3.14.0'
+  #pod 'Firebase/Core'
+  #pod 'Firebase/Firestore'
   
   # Pod for charts and graphs librarycd 
-  pod 'Charts'
+  #pod 'Charts'
   
 end
