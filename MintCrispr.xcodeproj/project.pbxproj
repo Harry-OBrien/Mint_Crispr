@@ -335,7 +335,6 @@
 				1662E5492302FB32001196E6 /* Frameworks */,
 				1662E54A2302FB32001196E6 /* Resources */,
 				1662E61D2304F907001196E6 /* ShellScript */,
-				541E89B35308F323995F0AE0 /* [CP] Embed Pods Frameworks */,
 				161691D4233EA26600480D0F /* ShellScript */,
 			);
 			buildRules = (
@@ -428,23 +427,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#TAGS=\"TODO:|FIXME:\"\n#ERRORTAG=\"ERROR:\"\n#find \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n";
-		};
-		541E89B35308F323995F0AE0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MintCrispr/Pods-MintCrispr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MintCrispr/Pods-MintCrispr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MintCrispr/Pods-MintCrispr-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		639256F601479B4A1883BFEE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

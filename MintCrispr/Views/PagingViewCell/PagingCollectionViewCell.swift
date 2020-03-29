@@ -11,11 +11,8 @@ import UIKit
 class PagingCollectionViewCell: UICollectionViewCell {
 	
 	//MARK: Variables
-	var device: ScannerDevice! {
-		didSet {
-			
-		}
-	}
+	var device: ScannerDevice!
+	
 	
 	public var willAnimateCell = false
 	private let openCellOffset: CGFloat = 40
@@ -27,9 +24,11 @@ class PagingCollectionViewCell: UICollectionViewCell {
 		}
 	}
 	
-	public var gradientImage: UIImage {
+	public var gradientImage: UIImage? {
 		get {
-			return frontContainerView.takeSnapshot(frontContainerView.bounds)!
+			let rect = CGRect(origin: CGPoint(x: 0, y: frontContainerView.bounds.height / 3),
+							  size: CGSize(width: frontContainerView.bounds.width, height: frontContainerView.bounds.height / 3))
+			return frontContainerView.takeSnapshot(rect)
 //			return frontContainerView.asImage()
 		}
 	}

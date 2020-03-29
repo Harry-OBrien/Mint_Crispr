@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 
 class PagingCollectionViewController: UICollectionViewController {
 	
@@ -128,10 +128,11 @@ extension PagingCollectionViewController {
 		
 		if cell.isOpen {
 			let deviceDetail = DeviceDetailTableViewController()
-			deviceDetail.backgroundGradientImage = UIImage(named: "low_poly_6")//cell.gradientImage
 			
+			deviceDetail.headerImage = cell.gradientImage
 			navigationItem.backBarButtonItem = UIBarButtonItem()
 			navigationController?.pushViewController(deviceDetail, animated: true)
+			
 		}
 		else {
 			//close cells either side
@@ -179,7 +180,7 @@ extension PagingCollectionViewController {
 		// double swipe up for transition
 		if cell.isOpen && sender.direction == .up {
 			let deviceDetail = DeviceDetailTableViewController()
-			deviceDetail.backgroundGradientImage = UIImage(named: "low_poly_6")//cell.gradientImage
+			deviceDetail.headerImage = UIImage(named: "low_poly_6")//cell.gradientImage
 			
 			navigationItem.backBarButtonItem = UIBarButtonItem()
 			navigationController?.pushViewController(deviceDetail, animated: true)

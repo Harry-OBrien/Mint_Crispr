@@ -12,6 +12,42 @@ class DetailInterfaceCell: UITableViewCell {
 	
 	// MARK: View Components
 	
+	let bluetoothStatusLable: UILabel = {
+		let label = UILabel()
+		
+		
+		return label
+	}()
+	
+	let sensorStatusLabel: UILabel = {
+		let label = UILabel()
+		
+		return label
+	}()
+	
+	let cardInsertedStatusLabel: UILabel = {
+		let label = UILabel()
+		
+		return label
+	}()
+	
+	let readyStatusLabel: UILabel = {
+		let label = UILabel()
+		
+		return label
+	}()
+	
+	let scanNowButton: UIButton = {
+		let btn = UIButton()
+		
+		return btn
+	}()
+	
+	let recentScansLabel: UILabel = {
+		let label = UILabel()
+		
+		return label
+	}()
 	
 	// MARK: Initialisers
 	
@@ -29,7 +65,7 @@ class DetailInterfaceCell: UITableViewCell {
 
 extension DetailInterfaceCell {
 	private func setupViews() {
-		backgroundColor = .orange //UIColor(white: 0.2, alpha: 1)
+		backgroundColor = UIColor(white: 0.95, alpha: 1)
 	}
 }
 

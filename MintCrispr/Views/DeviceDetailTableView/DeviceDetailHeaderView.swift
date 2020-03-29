@@ -18,10 +18,16 @@ class DeviceDetailHeaderView: UIView {
 		
 		return iv
 	}()
-		
+	
+	public var fontSize: CGFloat = 34 {
+		didSet {
+			DeviceNameTitleLable.font = UIFont(name: "HelveticaNeue-CondensedBold", size: fontSize)
+		}
+	}
+			
 	private let DeviceNameTitleLable: UILabel = {
 		let label = UILabel()
-		label.font = UIFont(name: "HelveticaNeue-CondensedBold", size: 42)
+		label.font = UIFont(name: "HelveticaNeue-CondensedBold", size: 34)
 		label.numberOfLines = 0
 		label.lineBreakMode = .byWordWrapping
 		label.textColor = .black
@@ -51,17 +57,12 @@ class DeviceDetailHeaderView: UIView {
 
 extension DeviceDetailHeaderView {
 	private func setupViews() {
+		layer.masksToBounds = true
 		backgroundColor = .clear//UIColor(r: 34, g: 96, b: 134)
 		embedInsideSafeArea(backgroundGradientImageView)
 		
-//		addSubview(DeviceNameTitleLable)
-//		addConstraintsWith(format: "H:|-[v0]-|", views: DeviceNameTitleLable)
-//		addConstraintsWith(format: "V:[v0]-|", views: DeviceNameTitleLable)
-		
-//		let iv = UIImageView()
-//		iv.image = self.asImage()
-//		iv.contentMode = .scaleAspectFill
-
-//		embedInsideSafeArea(iv)
+		addSubview(DeviceNameTitleLable)
+		addConstraintsWith(format: "H:|-[v0]-|", views: DeviceNameTitleLable)
+		addConstraintsWith(format: "V:|-90-[v0]-|", views: DeviceNameTitleLable)
 	}
 }
