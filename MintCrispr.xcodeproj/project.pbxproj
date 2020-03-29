@@ -409,7 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n#$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)\n";
+			shellScript = "#\"${PODS_ROOT}/Fabric/run\"\n#$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)\n";
 		};
 		1662E61D2304F907001196E6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
