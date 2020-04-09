@@ -11,10 +11,8 @@ class MintCrisprApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Color(0xff53b589),
-        accentColor: Color(0xff53b0b5),
-        buttonColor: Color(0xaa83a9d1),
+        accentColor: Color(0xee83a9d1),
         unselectedWidgetColor: Color(0xFFD0EAE7),
-        backgroundColor: Color(0xffefeff4),
       ),
       home: HomeScreen(),
     );
