@@ -30,10 +30,11 @@ public:
   void init() { connectionState = digitalRead(statePin); }
 
   bool isConnected() { return connectionState; }
+  bool isAvailable() { return ble.available(); }
   void setConnectionState(bool state) { connectionState = state; }
 
-  String readFromBluetooth() { return ble.readStringUntil('\n'); }
-  void writeToBluetooth(String content) { ble.write(content.c_str()); }
+  String readLine() { return ble.readStringUntil('\n'); }
+  void write(String line) { ble.write(line.c_str()); }
 
 };
 

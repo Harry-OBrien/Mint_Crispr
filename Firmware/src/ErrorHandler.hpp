@@ -9,6 +9,17 @@
 #ifndef ErrorHandler_h
 #define ErrorHandler_h
 
+
+//////////////////////////////////////////////////////////////////////
+//
+//  Error States:
+//    1: bluetooth disconnected (rapid flash)
+//    2: sensor failure (long flash)
+//    3: [unassigned] (double flash)
+//
+//////////////////////////////////////////////////////////////////////
+
+
 class ErrorHandler {
 
   uint8_t ledPinNumber = 13;
