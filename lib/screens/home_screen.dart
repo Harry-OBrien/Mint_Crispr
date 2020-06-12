@@ -21,7 +21,6 @@ class _HomeScreenState extends State<HomeScreen> {
             text: 'Mint',
             style: TextStyle(
               color: Theme.of(context).primaryColor,
-              fontFamily: "HelveticaNeue-Condensed",
               fontWeight: FontWeight.w200,
               fontSize: 40,
               letterSpacing: 1.4,
@@ -60,10 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: SafeArea(
-        child: Center(
-            child: DeviceCarousel(
-          devices: mockDeviceData,
-        )),
+        child: Center(child: DeviceCarousel(devices: mockDeviceData)),
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(color: Colors.white, boxShadow: [

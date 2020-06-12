@@ -32,7 +32,7 @@ class DeviceCarousel extends StatelessWidget {
               ),
             ),
             Text(
-              "Add or create a house with '+' button.",
+              "Add a device with '+' button above.",
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 13.0,
@@ -69,7 +69,9 @@ class DeviceCarousel extends StatelessWidget {
                 Navigator.push(
                   context,
                   new MaterialPageRoute(
-                    builder: (context) => new DeviceScreen(),
+                    builder: (context) => new DeviceScreen(
+                      device: device,
+                    ),
                   ),
                 );
               },
@@ -87,23 +89,23 @@ class DeviceCarousel extends StatelessWidget {
                           style: TextStyle(
                               color: Color(0xFF1A1A1A),
                               fontSize: 34.0,
-                              fontWeight: FontWeight.w400,
-                              letterSpacing: 1.2),
+                              fontWeight: FontWeight.w200,
+                              letterSpacing: 1.3),
                         ),
                         Row(
                           children: <Widget>[
                             Padding(
-                              padding: const EdgeInsets.only(left: 4),
+                              padding: const EdgeInsets.only(left: 2),
                               child: Icon(
-                                FontAwesomeIcons.list,
+                                FontAwesomeIcons.bluetoothB,
                                 size: 13.0,
                                 color: Color(0xFF1A1A1A),
                               ),
                             ),
                             Padding(
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 8.0),
-                              child: Text('12'),
+                                  const EdgeInsets.symmetric(horizontal: 4.0),
+                              child: Text('Connected'),
                             )
                           ],
                         ),
