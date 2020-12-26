@@ -35,9 +35,10 @@ class DeviceCarousel extends StatelessWidget {
               "Add a device with '+' button above.",
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: 13.0,
-                  color: Colors.grey,
-                  fontWeight: FontWeight.w200),
+                fontSize: 13.0,
+                color: Colors.grey,
+                fontWeight: FontWeight.w200,
+              ),
             ),
           ],
         ),
