@@ -1,0 +1,3 @@
+[submodule "Firmware/mocks"]
+	path = Firmware/mocks
+	url = git@github.com:Harry-OBrien/Hardware-mocks.git

@@ -1,0 +1,66 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/include",
+                "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/src",
+                "/Users/HarryOB/.platformio/packages/framework-arduinoavr/cores/arduino",
+                "/Users/HarryOB/.platformio/packages/framework-arduinoavr/variants/feather32u4",
+                "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/PCA9548ADGVR",
+                "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/TSL2561-Arduino-Library",
+                "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
+                "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
+                "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
+                "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
+                "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
+                "/Users/HarryOB/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/include",
+                    "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/src",
+                    "/Users/HarryOB/.platformio/packages/framework-arduinoavr/cores/arduino",
+                    "/Users/HarryOB/.platformio/packages/framework-arduinoavr/variants/feather32u4",
+                    "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/PCA9548ADGVR",
+                    "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/TSL2561-Arduino-Library",
+                    "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
+                    "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
+                    "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
+                    "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
+                    "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
+                    "/Users/HarryOB/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=50101",
+                "ARDUINO_AVR_FEATHER32U4",
+                "F_CPU=8000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10805",
+                "USB_VID=0x239A",
+                "USB_PID=0x800C",
+                "USB_PRODUCT=\"Feather 32u4\"",
+                "USB_MANUFACTURER=\"Adafruit\"",
+                "__AVR_ATmega32U4__",
+                ""
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "/Users/HarryOB/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=atmega32u4",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
