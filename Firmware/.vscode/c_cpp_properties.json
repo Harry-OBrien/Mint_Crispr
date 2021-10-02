@@ -10,15 +10,15 @@
             "includePath": [
                 "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/include",
                 "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/src",
+                "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/TSL2561",
+                "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/PCA9548A",
+                "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
                 "/Users/HarryOB/.platformio/packages/framework-arduinoavr/cores/arduino",
                 "/Users/HarryOB/.platformio/packages/framework-arduinoavr/variants/feather32u4",
-                "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/PCA9548ADGVR",
-                "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/TSL2561-Arduino-Library",
                 "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
                 "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
                 "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
                 "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
-                "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
                 "/Users/HarryOB/.platformio/packages/tool-unity",
                 ""
             ],
@@ -27,15 +27,15 @@
                 "path": [
                     "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/include",
                     "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/src",
+                    "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/TSL2561",
+                    "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/PCA9548A",
+                    "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
                     "/Users/HarryOB/.platformio/packages/framework-arduinoavr/cores/arduino",
                     "/Users/HarryOB/.platformio/packages/framework-arduinoavr/variants/feather32u4",
-                    "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/PCA9548ADGVR",
-                    "/Users/HarryOB/GitRepos/ongoing/mintcrispr/Firmware/lib/TSL2561-Arduino-Library",
                     "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
                     "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
                     "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
                     "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
-                    "/Users/HarryOB/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
                     "/Users/HarryOB/.platformio/packages/tool-unity",
                     ""
                 ]
