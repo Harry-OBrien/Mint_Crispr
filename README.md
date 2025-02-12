@@ -6,7 +6,7 @@ Mint Crispr works by using CRISPR-Cas9 to find specific genetic markers of speci
 
 Before the device is used, a molecule is made that uses CRISPR to match to a pre-programmed genetic sequence, and is combined with a flourescent marker covered in a sheath. This sheath blocks the light coming from the flourescent marker.
 
-When the target sequence is found by CRISPR, a genetic 'pair of scissors' (this is Cas part of the system) cuts the sheath allowing the a fluorescent marker to be detected under UV light. This indicates the presence of the targetted disease. The flouresence is sensed by the Mint Crispr device and sent to the user's phone as a positive reading. This has be performed at a raised temperature, so the whole device was placed into an incubation cabinet during use.
+The user would combine the pre-made molecule with a blood sample on a credit-card-sized piece of paper and insert it into the device. When the target sequence is found by CRISPR, a genetic 'pair of scissors' (this is Cas part of the system) cuts the sheath allowing the a fluorescent marker to be detected under UV light. This indicates the presence of the targetted disease. The flouresence is sensed by the Mint Crispr device and sent to the user's phone as a positive reading. This has be performed at a raised temperature, so the whole device was placed into an incubation cabinet during use.
 
 The previous solution for leukemia diagnosis in Malawi was to send blood smears to Newcastle University in the UK where an expensive device would detect the presence of cancerous diseases. This was a week long process from start to finish. Mint Crispr meant that doctors could get a diagnosis within half an hour and, until it was replaced, likely saved many lives.
 
